@@ -40,7 +40,7 @@ Prepare the environment by:
 10. Verify the File is Uploaded: ls -l
 11. Download file to local machine: Report.html
 
-![Installing an running OpenSCAP](https://raw.githubusercontent.com/your-username/repo-name/branch-name/architecture-diagram.png)
+![Installing an running OpenSCAP](GoldenImage1.png)
 
 - Install ClamAV to act as an antivirus using the command: sudo yum install -y clamav
 - Install Advanced Intrusion Detection Environment (AIDE) to serve as the IDS using the following command:
