@@ -23,10 +23,12 @@ Before using this project, ensure you have:
 
 Prepare the environment by:
 - Launching an EC2 Instance (Amazon Linux 2).
-- Obtain Linux 2 STIGs from the DoD Cyber Exchange and apply settings using build component (pipeline recipe).
-- Apply the CIS benchmarks using CIS-CAT.
-- Link your SSH to the instance created using the command: ssh -i \Users\adetu\Downloads\securegoldenimagekey.pem ec2-user@54.224.218.150
+- Create a pipeline recipe by navigating to the seach bar in the build component to:
+1. Obtain Linux 2 STIGs from the DoD Cyber Exchange and apply settings.
+2. Apply the CIS benchmarks using CIS-CAT.
+- Link your SSH to the instance created using the command: ssh -i \Users\name\Downloads\securegoldenimagekey.pem ec2-user@(ip address)
 
+Now that the environment is prepared;
 - Install and run openscap with the following commands:
 1. Update: sudo yum update -y
 2. sudo yum install -y openscap-scanner scap-security-guide
@@ -40,9 +42,13 @@ Prepare the environment by:
 10. Verify the File is Uploaded: ls -l
 11. Download file to local machine: Report.html
 
-![Installing an running OpenSCAP](GoldenImage1.png)
+![Installing and running OpenSCAP](GoldenImage1.png)
 
-![Installing an running OpenSCAP](GoldenImage2.png)
+![Installing and running OpenSCAP](GoldenImage2.png)
+
+![Installing and running OpenSCAP](GoldenImage3.png)
+
+![Installing and running OpenSCAP](GoldenImage4.png)
 
 - Install ClamAV to act as an antivirus using the command: sudo yum install -y clamav
 - Install Advanced Intrusion Detection Environment (AIDE) to serve as the IDS using the following command:
@@ -50,9 +56,12 @@ Prepare the environment by:
 2. sudo aide --init
 3. sudo aide --check
 
+![Installing ClamAV](GoldenImage5.png)
+
+
 - Set up and configure cloudtrail for logging and monitoring of the instance.
 - Configure the security group of the instance by allowing only necessary inbound traffic like limit SSH access to your IP address, always use HTTPS for web communication and outbound traffic like allow all outbound traffic, so as to serve as a firewall for the instance.
-- Install lynis to serve as a continuous vulnerability scanning tool for the instance. We did this with the following commands:
+- Install lynis to serve as a continuous vulnerability scanning tool for the instance. Do this with the following commands:
 1. Install Lynis: sudo yum install -y lynis
 2. Run Lynis: sudo lynis audit system
 3. View the Lynis Log: sudo cat /var/log/lynis.log
@@ -80,5 +89,5 @@ Prepare the environment by:
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/aws-secure-golden-image.git
+   git clone https://github.com/CyberDiva-Enyinnaya/aws-secure-golden-image.git
    cd aws-secure-golden-image
