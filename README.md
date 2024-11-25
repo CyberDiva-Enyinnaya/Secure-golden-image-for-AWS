@@ -42,6 +42,8 @@ Prepare the environment by:
 
 ![Installing an running OpenSCAP](GoldenImage1.png)
 
+![Installing an running OpenSCAP](GoldenImage2.png)
+
 - Install ClamAV to act as an antivirus using the command: sudo yum install -y clamav
 - Install Advanced Intrusion Detection Environment (AIDE) to serve as the IDS using the following command:
 1. sudo yum install aide
